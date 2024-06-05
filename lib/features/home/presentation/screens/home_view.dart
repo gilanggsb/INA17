@@ -60,7 +60,22 @@ class HomeView extends StatelessWidget {
               fontSize: 20,
             ),
             10.heightBox,
-            DefaultTextField(controller: nController, hintText: ''),
+            DefaultTextField(
+              controller: nController,
+              hintText: '',
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: AppColors.grey300),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              disabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: AppColors.grey300),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(4),
+                borderSide: const BorderSide(color: AppColors.primary),
+              ),
+            ),
             16.heightBox,
             GridView.builder(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
